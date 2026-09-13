@@ -6,13 +6,12 @@ from pathlib import Path
 import csv,json,sys
 P=Path(__file__).resolve().parent
 sys.path.insert(0,str(P/'vendor-python'))
-sys.path.insert(0,str(Path.home()/'.codex/skills/nature-figure/scripts'))
 import numpy as np
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator, FuncFormatter
-from audit_panel_alignment import require_matplotlib_panel_alignment
+from figure_checks import require_matplotlib_panel_alignment
 
 OUT=P/'figures'
 COLORS={'Light canvases':'#EE7733','Dark canvases':'#0077BB'}

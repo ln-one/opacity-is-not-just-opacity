@@ -1,5 +1,7 @@
 """Reproduce browser checks via the installed Playwright CLI (local HTTP server required)."""
 import argparse
+import os
+import shlex
 import hashlib
 import json
 import subprocess
@@ -7,11 +9,11 @@ import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-CLI = Path.home()/'.codex/skills/playwright/scripts/playwright_cli.sh'
+CLI = shlex.split(os.environ.get('PLAYWRIGHT_CLI', 'playwright-cli'))
 
 
 def command(session, *args, raw=False):
-    cmd = [str(CLI), '-s='+session]
+    cmd = CLI + ['-s='+session]
     if raw: cmd.append('--raw')
     return subprocess.check_output(cmd+list(args), text=True, cwd=HERE.parents[1], timeout=90)
 

@@ -3,12 +3,11 @@ from pathlib import Path
 import sys,json,base64
 P=Path(__file__).resolve().parent
 sys.path.insert(0,str(P/'vendor-python'))
-sys.path.insert(0,str(Path.home()/'.codex/skills/nature-figure/scripts'))
 import numpy as np
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
-from audit_panel_alignment import require_matplotlib_panel_alignment
+from figure_checks import require_matplotlib_panel_alignment
 from numerical import decode,encode,render
 O=P/'figures'
 D=json.loads((O/'icon-examples-source.json').read_text())

@@ -1,0 +1,25 @@
+# Local environments and caches
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+vendor-python/
+node_modules/
+.playwright-cli/
+.env
+.env.*
+# Generated manuscript build and local review materials
+paper/latex/
+paper/review/
+output/*
+!output/preprint/
+output/preprint/*
+!output/preprint/opacity-is-not-just-opacity.pdf
+!output/preprint/README.md
+markdown/manuscript.en.source.md
+# Local figure audits and intermediate gallery images
+*.alignment.json
+*.collision-audit.json
+*-audit_*.json
+*-source-qa.txt
+experiments/formal-evaluation/figures/gallery-*.png

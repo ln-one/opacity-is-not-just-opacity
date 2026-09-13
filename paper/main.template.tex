@@ -1,0 +1,60 @@
+\documentclass[sigconf,nonacm]{acmart}
+\setkeys{acmart.cls}{balance=false}
+
+\usepackage{orcidlink}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{multicol}
+\setcopyright{none}
+\settopmatter{printacmref=false,printfolios=true}
+\acmConference{}{}{}
+\acmBooktitle{}
+\acmDOI{}
+\acmISBN{}
+\acmYear{2026}
+\copyrightyear{2026}
+\pagestyle{plain}
+
+\title{Opacity Is Not Just Opacity}
+\newcommand{\authororcid}{\,\orcidlink{0009-0005-8865-2090}}
+\author{\texorpdfstring{Chunran Zhang\authororcid}{Chunran Zhang}}
+\orcid{0009-0005-8865-2090}
+\affiliation{%
+  \department{School of Computing and Artificial Intelligence}
+  \institution{Southwest Jiaotong University}
+  \city{Chengdu}
+  \country{China}}
+\email{chronis@my.swjtu.edu.cn}
+\renewcommand{\shortauthors}{Chunran Zhang}
+
+\begin{document}
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+\keywords{alpha compositing, color contrast, background adaptation, web graphics}
+\maketitle
+\flushbottom
+\setlength{\parskip}{0pt plus 1.2pt}
+
+\input{sections/method-figure}
+\begingroup
+\setlength{\emergencystretch}{1em}
+\input{sections/introduction}
+\endgroup
+\input{sections/related-work}
+\input{sections/method}
+\input{sections/experiment-figures}
+\input{sections/experiments}
+\input{sections/conclusion}
+
+\begin{acks}
+\input{sections/acknowledgments}
+\end{acks}
+
+\FloatBarrier
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix}
+\end{document}

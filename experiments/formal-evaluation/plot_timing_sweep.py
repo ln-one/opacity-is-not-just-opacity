@@ -3,14 +3,13 @@ from pathlib import Path
 import sys,json,csv
 P=Path(__file__).resolve().parent
 sys.path.insert(0,str(P/'vendor-python'))
-sys.path.insert(0,str(Path.home()/'.codex/skills/nature-figure/scripts'))
 import numpy as np
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
-from audit_panel_alignment import require_matplotlib_panel_alignment
+from figure_checks import require_matplotlib_panel_alignment
 O=P/'figures';BROWSERS=['chrome','firefox','webkit'];COLOR='#009988'
 def load():
  data={b:json.loads((P/'results'/f'timing-sweep-{b}.json').read_text()) for b in BROWSERS}

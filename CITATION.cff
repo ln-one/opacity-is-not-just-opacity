@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this work."
+title: "Opacity Is Not Just Opacity"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Chunran
+    orcid: "https://orcid.org/0009-0005-8865-2090"
+repository-code: "https://github.com/ln-one/opacity-is-not-just-opacity"
+url: "https://github.com/ln-one/opacity-is-not-just-opacity"

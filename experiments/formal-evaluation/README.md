@@ -1,10 +1,10 @@
-# Formal evaluation — first execution
+# Formal evaluation
 
 This directory retains the experiment record. The author-approved Chinese section is [Experiments](../../markdown/04.experiments.zh.md). See `report.zh.md` for measured findings and `protocol.json` for the fixed numerical design. The design follows earlier pilots and is not preregistered.
 
 ## Reproduce numerical results
 
-Use Python 3.12 with NumPy 2.3.5 and Colour Science 0.4.7. The current desktop run used bundled Python and a local `vendor-python/` installation of Colour Science; the APIs used do not require the unavailable plotting or SciPy features.
+Use Python 3.12 and install the pinned dependencies in `requirements.txt`. Run the commands below from this directory. Recorded runs used NumPy 2.3.5 and Colour Science 0.4.7.
 
 ```sh
 python numerical.py --suite verify
@@ -21,7 +21,7 @@ Each completed fixed-background numerical result can be resumed if its protocol 
 
 ## Browser evaluation
 
-Serve this directory on loopback port 8767. Open `browser.html` for an interactive atlas or `preview.html` for the fixed comparison. Install and pin browser builds used by Playwright CLI. Open named sessions `opacity-chrome`, `opacity-firefox`, and `opacity-webkit` with the respective `--browser` choice, then run `browser_driver.py --browser <name>` sequentially with other benchmarking tasks idle.
+Serve this directory on loopback port 8767. Open `browser.html` for an interactive atlas or `preview.html` for the fixed comparison. Install `@playwright/cli@0.1.19` with npm. Recorded browser versions are retained in the result files. Open named sessions `opacity-chrome`, `opacity-firefox`, and `opacity-webkit` with the respective `--browser` choice, then run `browser_driver.py --browser <name>` sequentially with other benchmarking tasks idle.
 
 This prototype renders application-owned background colors in WebGL; it does not extend native CSS opacity or read arbitrary DOM backdrops. Geometric coverage stays separate from the extension coefficient. Every covered pixel is checked against a CPU scalar reference, with 1 byte tolerance. Native Canvas2D source-over/difference/exclusion are checked separately.
 
@@ -45,4 +45,16 @@ Timing revision v3 pairs coefficients symmetrically around 1: 0.6/1.4 and 0.9/1.
 
 Figures are generated with `plot_figure1.py`, `plot_color_examples.py`, `plot_icon_examples.py`, and `plot_timing_sweep.py`. Run `figure1_data.py` to regenerate the curve source data, and `capture_icon_examples.py` with the Chrome session to capture the current 192-pixel illustrative icons. The 16/24/48-pixel validation corpus is unchanged. `figures/method/build_method.py` builds the editable draw.io diagram; draw.io CLI exports use native automatic SVG themes.
 
-The plotting environment uses the installed nature-figure skill's panel-alignment helper; browser automation uses the installed playwright skill's CLI wrapper. Exact dependency pins are in `requirements.txt`. `markdown/figures/` contains copies of the four approved light previews for portable manuscript reading; numerical sources, dark variants and vector exports remain here. Local dependency installations and Python caches are excluded from Git.
+Plotting uses the repository's `figure_checks.py`; no Codex skills are required. Browser automation invokes `playwright-cli` from PATH; `PLAYWRIGHT_CLI` can override the command. Exact dependency pins are in `requirements.txt`. `markdown/figures/` contains copies of the four approved light previews for portable manuscript reading; numerical sources, dark variants and vector exports remain here. Local dependency installations and Python caches are excluded from Git.
+
+## Portable browser setup
+
+Install the CLI with `npm install -g @playwright/cli@0.1.19`. Open `playwright-cli -s=opacity-chrome open http://127.0.0.1:8767/browser.html --browser chrome`; repeat with `firefox` and `webkit`. Then run `python browser_driver.py --browser chrome` or `python run_timing_sweep.py` for the full timing sweep. Browser downloads and local graphics support are required.
+
+## Appendix gallery
+
+`python plot_background_gallery.py` generates two plates retaining all 300 icons. Install `rsvg-convert` (librsvg) for SVG coverage rasterization. Seven backgrounds mix each Vibrant color with 10% white in encoded sRGB; the eighth is dark grey. Columns retain source colors and icon order, comparing alpha 1 and 2. These are high-resolution illustrations, not browser screenshots or recognition measurements.
+
+## Execution records
+
+`artifact-manifest.json` records an earlier execution snapshot, not every later edit. Numerical kernels and recorded results are preserved; plotting and CLI wrappers have subsequently been made portable. Historical diagnostics retain their original source and provenance. Re-running scripts can overwrite corresponding result files; keep a copy when comparing a new environment.
