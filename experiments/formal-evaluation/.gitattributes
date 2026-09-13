@@ -1,0 +1,3 @@
+# Preserve native vector-export formatting and standard CSV line endings.
+*.svg -whitespace
+*.csv whitespace=cr-at-eol

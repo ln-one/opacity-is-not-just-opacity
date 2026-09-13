@@ -1,0 +1,170 @@
+[
+  {
+    "alpha": 0,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF"
+    ]
+  },
+  {
+    "alpha": 0,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#181818",
+      "#181818",
+      "#181818"
+    ]
+  },
+  {
+    "alpha": 0.6,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#F5BDAD",
+      "#AABDDA",
+      "#F5ADBD"
+    ]
+  },
+  {
+    "alpha": 0.6,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#BE5F2A",
+      "#0C5F95",
+      "#BE2A5F"
+    ]
+  },
+  {
+    "alpha": 1,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ]
+  },
+  {
+    "alpha": 1,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ]
+  },
+  {
+    "alpha": 1,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ]
+  },
+  {
+    "alpha": 1,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ]
+  },
+  {
+    "alpha": 1.1,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#EC5A00",
+      "#005AB2",
+      "#EC005A"
+    ]
+  },
+  {
+    "alpha": 1.1,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#F87C35",
+      "#007CC3",
+      "#F8357C"
+    ]
+  },
+  {
+    "alpha": 1.4,
+    "background": "#FFFFFF",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#E70000",
+      "#000094",
+      "#E70000"
+    ]
+  },
+  {
+    "alpha": 1.4,
+    "background": "#181818",
+    "source": [
+      "#EE7733",
+      "#0077BB",
+      "#EE3377"
+    ],
+    "output": [
+      "#FF8A3A",
+      "#008AD9",
+      "#FF3A8A"
+    ]
+  }
+]

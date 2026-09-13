@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Beyond Opacity — Fixed Icons</title>
+<style>body{font:16px system-ui;margin:28px;color:#222;background:#f3f4f5}h1{font-size:26px}h2{font-size:17px;margin-top:28px}main{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}section{min-width:0}section canvas{width:100%;height:auto;display:block}p{color:#555}#display,#controls{display:none}header{display:flex;justify-content:space-between;font-weight:600;margin-bottom:10px}.note{font-size:13px}</style>
+<h1>Fixed icons across light and dark canvases</h1><p>Same seven source colors · coefficients fixed across backgrounds · linear-light prototype</p>
+<div id="controls"><input id="bg" value="#ffffff"><input id="gain" value="1.1"><span id="value"></span></div><p id="status">Loading…</p><canvas id="display"></canvas><div id="comparisons"></div>
+<p class="note">First 80 icons in the outcome-independent selection shown here; all 300 icons evaluated at 16, 24 and 48 px. This preview does not establish human recognition performance.</p>
+<script src="browser.js"></script><script>
+async function build(){while(!window.ready){if(window.loadError)throw Error(loadError);await new Promise(r=>setTimeout(r,100));}
+for(const bg of ['#FFFFFF','#182028']){const h=document.createElement('h2');h.textContent=bg==='\x23FFFFFF'?'Light canvas':'Dark canvas';document.querySelector('#comparisons').append(h);const row=document.createElement('main');document.querySelector('#comparisons').append(row);
+for(const a of [.9,1,1.1]){await showCase(bg,a);const section=document.createElement('section'),label=document.createElement('header');label.textContent='α = '+a.toFixed(1);section.append(label);const pic=document.createElement('canvas');pic.width=canvas.width;pic.height=160;pic.getContext('2d').drawImage(canvas,0,0,canvas.width,160,0,0,canvas.width,160);section.append(pic);row.append(section);}}
+document.querySelector('#status').textContent='Preview ready';window.previewReady=true;}
+build().catch(e=>document.querySelector('#status').textContent=e.stack);
+</script></html>

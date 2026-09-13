@@ -1,0 +1,16 @@
+{
+  "change": "Replace finish-only timing with mandatory one-pixel readback after every frame",
+  "reason": "finish-only blocks returned zero at available timer resolution; a 100-frame readback probe took 54.1 ms and verified alternating output bytes",
+  "alphas": [
+    0.5,
+    0.9,
+    1,
+    1.1,
+    1.4
+  ],
+  "samples_per_alpha": 25,
+  "frames_per_sample": 20,
+  "warmup_frames": 50,
+  "scope": "CPU wall time for draw and synchronous pixel readback; readback overhead included; no claim about unmodified browser-engine overhead",
+  "previous_results": "results/diagnostics/finish-only-*.json"
+}

@@ -1,0 +1,38 @@
+{
+  "version": "tol-colors 2.2.0; Tol technical note issue 3.2 (2021-08-18)",
+  "source": "https://github.com/Descanonge/tol_colors/tree/v2.2.0",
+  "note": "https://yuval.yarom.org/pdfs/Tol21.pdf",
+  "vibrant": {
+    "orange": "#EE7733",
+    "blue": "#0077BB",
+    "cyan": "#33BBEE",
+    "magenta": "#EE3377",
+    "red": "#CC3311",
+    "teal": "#009988",
+    "grey": "#BBBBBB"
+  },
+  "YlOrBr": [
+    "#FFFFE5",
+    "#FFF7BC",
+    "#FEE391",
+    "#FEC44F",
+    "#FB9A29",
+    "#EC7014",
+    "#CC4C02",
+    "#993404",
+    "#662506"
+  ],
+  "Sunset": [
+    "#364B9A",
+    "#4A7BB7",
+    "#6EA6CD",
+    "#98CAE1",
+    "#C2E4EF",
+    "#EAECCC",
+    "#FEDA8B",
+    "#FDB366",
+    "#F67E4B",
+    "#DD3D2D",
+    "#A50026"
+  ]
+}

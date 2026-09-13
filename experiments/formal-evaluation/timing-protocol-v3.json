@@ -1,0 +1,21 @@
+{
+  "change": "Replace alpha 0.5 with 0.6 for symmetric offsets about 1",
+  "reason": "Author requested matched pairs 0.6/1.4 and 0.9/1.1; rerun all five coefficients together in each browser",
+  "alphas": [
+    0.6,
+    0.9,
+    1,
+    1.1,
+    1.4
+  ],
+  "samples_per_alpha": 25,
+  "frames_per_sample": 20,
+  "warmup_frames": 50,
+  "scope": "CPU wall time for draw and synchronous pixel readback; readback overhead included; no claim about unmodified browser-engine overhead",
+  "previous_results": "results/diagnostics/pre-symmetric-alpha/",
+  "created_utc": "2026-09-13T08:38:29.181914+00:00",
+  "pixel_validation_alphas_below_one": [
+    0.6,
+    0.9
+  ]
+}

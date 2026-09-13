@@ -1,0 +1,17 @@
+{
+  "change": "Full coefficient sweep requested by author",
+  "alpha_start": 0,
+  "alpha_end": 2,
+  "alpha_step": 0.025,
+  "samples_per_alpha": 25,
+  "frames_per_sample": 20,
+  "warmup_sweeps": 2,
+  "seed": 20260913,
+  "icon_size": 48,
+  "icons": 300,
+  "backgrounds": ["#FAF7F2", "#182028"],
+  "order": "Seeded Fisher-Yates permutation of all 81 coefficients in every round; same schedule in each browser; browsers measured sequentially",
+  "measurement": "CPU performance.now interval around 20 draws with synchronous one-pixel readPixels after each draw; divide by 20",
+  "summary": "Median and empirical 10th/90th percentile of 25 block means; percentiles use linear interpolation",
+  "scope": "Existing WebGL uniform-driven shader, including readback; not unmodified native alpha compositing or pure GPU time"
+}

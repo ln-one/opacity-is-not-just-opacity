@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "oracle_cases": 7189,
+  "chunk_invariance": true,
+  "endpoints": true
+}

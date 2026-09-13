@@ -1,0 +1,81 @@
+{
+  "status": "execution protocol fixed before this formal run; informed by prior pilots, not preregistered",
+  "created_utc": "2026-09-13T08:11:44.093831+00:00",
+  "space": "linear-light sRGB, float64",
+  "source_encoding": "sRGB",
+  "output": "component clipping to [0,1], then sRGB encoding when needed",
+  "backgrounds": [
+    "#FFFFFF",
+    "#000000",
+    "#FAFAFA",
+    "#F5F5F5",
+    "#EEEEEE",
+    "#111111",
+    "#181818",
+    "#242424",
+    "#FAF7F2",
+    "#F2F6FA",
+    "#F3F8F4",
+    "#FAF3F6",
+    "#201C18",
+    "#182028",
+    "#19221C",
+    "#241B21"
+  ],
+  "background_selection": "synthetic neutral and mildly tinted endpoint canvases, not a measured prevalence sample",
+  "methods": [
+    "1",
+    "1.05",
+    "1.1",
+    "1.2",
+    "1.4",
+    "difference",
+    "exclusion"
+  ],
+  "baseline_conditions": "Numerical difference/exclusion in matched linear-light space; browser-native encoded-sRGB modes checked separately. No superiority claim from different arithmetic spaces.",
+  "full_sources": "all 256^3 encoded 8-bit sRGB values, every source retained including neutrals",
+  "coefficient_sweep": {
+    "source_grid": 65,
+    "alpha_min": 0,
+    "alpha_max": 2,
+    "alpha_step": 0.025
+  },
+  "stress": {
+    "source_grid": 17,
+    "background_grid": 33,
+    "distribution": "uniform regular encoded-sRGB grids, not Web prevalence"
+  },
+  "pair_comparison": {
+    "palette": "all seven original Tol Vibrant",
+    "random_pairs": 65536,
+    "seed": 20260913,
+    "backgrounds": "same 16 canvases",
+    "metrics": [
+      "CIEDE2000",
+      "exact encoded 8-bit merger"
+    ]
+  },
+  "numerical_metrics": [
+    "contrast difference distribution",
+    "improve/unchanged/worse counts",
+    "3:1 and 4.5:1 crossings",
+    "clipped fraction",
+    "componentwise background-distance violation count",
+    "worst source/background/output"
+  ],
+  "threshold_scope": "contrast thresholds are diagnostic, not whole-page WCAG certification",
+  "no_grayscale_discrimination": true,
+  "timing": {
+    "alphas": [
+      0.5,
+      0.9,
+      1,
+      1.1,
+      1.4
+    ],
+    "primary": "below-one versus above-one in same renderer",
+    "auxiliary": "alpha=1",
+    "claim_scope": "prototype path overhead, not unmodified browser-engine overhead"
+  },
+  "storage": "aggregates, histograms, extrema and deterministic generators; not billions of raw rows"
+}
