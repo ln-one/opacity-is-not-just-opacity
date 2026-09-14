@@ -1,61 +1,15 @@
 # Opacity Is Not Just Opacity
 
+![The same icons on a dark background: original at alpha 1, enhanced at alpha 2](docs/images/dark-comparison.png)
+
+**[Online demo](https://ln-one.github.io/opacity-is-not-just-opacity/demo/)** · [Paper PDF](output/preprint/opacity-is-not-just-opacity.pdf) · [Manuscript](markdown/manuscript.en.md) · [Reproduction guide](experiments/formal-evaluation/README.md)
+
 **Chunran Zhang · Southwest Jiaotong University**
 
-Alpha compositing scales the color difference between an object and its background. Extending its coefficient domain from [0, 1] to [0, ∞) adds difference expansion while retaining conventional transparency:
+Extend alpha beyond 1 to enhance object–background color differences, keeping the source colors and compositing equation fixed.
 
 $$
 C_o=\mathrm{clip}_{[0,1]}\left(C_b+\alpha(C_s-C_b)\right).
 $$
 
-The object keeps its source color and coefficient; the actual background determines the output. This repository contains the manuscript, numerical evaluation, browser prototype, and recorded results. The prototype uses a custom WebGL shader; it does not change native CSS opacity.
-
-[Paper PDF](output/preprint/opacity-is-not-just-opacity.pdf) · [English manuscript](markdown/manuscript.en.md) · [Experiments](experiments/formal-evaluation/README.md) · [Paper build](paper/README.md)
-
-## Try the demo
-
-**[Open the interactive demo](https://ln-one.github.io/opacity-is-not-just-opacity/demo/)**
-
-Change the background and alpha, or compare against the original source colors. The demo runs entirely in your browser and includes Auto, Light and Dark interface themes.
-
-To run it locally:
-
-From the repository root:
-
-```sh
-python3 -m http.server 8771
-```
-
-Open [the demo](http://localhost:8771/demo/). The original [WebGL atlas](http://localhost:8771/experiments/formal-evaluation/browser.html) and [background gallery](http://localhost:8771/experiments/formal-evaluation/gallery.html) remain available.
-
-## Across backgrounds
-
-From the paper appendix: the same 300 icons and seven fixed source colors, with **α = 1 on the left** and **α = 2 on the right**. Near-source backgrounds reveal the change; these are selected visual examples.
-
-![Original and enhanced icons on red, orange, teal and cyan backgrounds](markdown/figures/background-gallery-1.png)
-
-![Original and enhanced icons on blue, magenta, grey and dark grey backgrounds](markdown/figures/background-gallery-2.png)
-
-## Reproduce
-
-Use Python 3.12 in a virtual environment:
-
-```sh
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r experiments/formal-evaluation/requirements.txt
-cd experiments/formal-evaluation
-python numerical.py --suite verify
-```
-
-The [experiment guide](experiments/formal-evaluation/README.md) covers the full color enumeration, coefficient sweeps, color-pair tests, figure generation and browser timing. Recorded results include failures and clipping costs. RGB-distance preservation does not guarantee contrast-ratio improvement on every background, and clipping can merge distinct source colors.
-
-## Contents
-
-- `demo/`: interactive playground, deployed with GitHub Pages.
-- `markdown/`: manuscript sections and the complete English reader.
-- `paper/`: ACM manuscript template, bibliography and build scripts.
-- `experiments/formal-evaluation/`: code, protocols, recorded results, icons and figure sources.
-- `output/preprint/`: current named preprint.
-
-Code: [MIT](LICENSE). Manuscript and third-party materials: [licensing and provenance](NOTICE.md).
+Code: [MIT](LICENSE). Manuscript and third-party materials: [licensing](NOTICE.md).
