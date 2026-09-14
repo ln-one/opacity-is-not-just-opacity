@@ -5,7 +5,7 @@
 Alpha compositing scales the color difference between an object and its background. Extending its coefficient domain from [0, 1] to [0, ∞) adds difference expansion while retaining conventional transparency:
 
 $$
-C_o=\operatorname{clip}_{[0,1]}\bigl(C_b+\alpha(C_s-C_b)\bigr).
+C_o=\mathrm{clip}_{[0,1]}\left(C_b+\alpha(C_s-C_b)\right).
 $$
 
 The object keeps its source color and coefficient; the actual background determines the output. This repository contains the manuscript, numerical evaluation, browser prototype, and recorded results. The prototype uses a custom WebGL shader; it does not change native CSS opacity.
