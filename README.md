@@ -14,13 +14,27 @@ The object keeps its source color and coefficient; the actual background determi
 
 ## Try the demo
 
+**[Open the interactive demo](https://ln-one.github.io/opacity-is-not-just-opacity/demo/)**
+
+Change the background and alpha, or compare against the original source colors. The demo runs entirely in your browser and includes Auto, Light and Dark interface themes.
+
+To run it locally:
+
 From the repository root:
 
 ```sh
-python3 -m http.server 8767 --directory experiments/formal-evaluation
+python3 -m http.server 8771
 ```
 
-Open [the interactive atlas](http://localhost:8767/browser.html) or [the background gallery](http://localhost:8767/gallery.html).
+Open [the demo](http://localhost:8771/demo/). The original [WebGL atlas](http://localhost:8771/experiments/formal-evaluation/browser.html) and [background gallery](http://localhost:8771/experiments/formal-evaluation/gallery.html) remain available.
+
+## Across backgrounds
+
+From the paper appendix: the same 300 icons and seven fixed source colors, with **α = 1 on the left** and **α = 2 on the right**. Near-source backgrounds reveal the change; these are selected visual examples.
+
+![Original and enhanced icons on red, orange, teal and cyan backgrounds](markdown/figures/background-gallery-1.png)
+
+![Original and enhanced icons on blue, magenta, grey and dark grey backgrounds](markdown/figures/background-gallery-2.png)
 
 ## Reproduce
 
@@ -38,6 +52,7 @@ The [experiment guide](experiments/formal-evaluation/README.md) covers the full 
 
 ## Contents
 
+- `demo/`: interactive playground, deployed with GitHub Pages.
 - `markdown/`: manuscript sections and the complete English reader.
 - `paper/`: ACM manuscript template, bibliography and build scripts.
 - `experiments/formal-evaluation/`: code, protocols, recorded results, icons and figure sources.
