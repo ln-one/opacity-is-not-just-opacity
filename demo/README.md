@@ -5,7 +5,7 @@ A static, browser-only playground for fixed-color, background-adaptive compositi
 Run `python3 -m http.server 8771` from the repository root and open
 http://localhost:8771/demo/.
 
-The atlas uses all 300 icons from the experiment's pinned Lucide manifest and its
+The bundled `atlas.json` uses all 300 icons from the experiment's pinned Lucide manifest and its
 seven source colors. JavaScript computes clipped linear-RGB colors; SVG renders
 the icons. This interactive SVG demo is separate from the measured WebGL pipeline.
 Explore retains the appendix's 25 × 12 order; Compare reflows the same ordered

@@ -27,8 +27,8 @@ $('#compare').onclick=()=>compare(true);$('#solo').onclick=()=>compare(false);
 $('#one').onclick=()=>{alpha=1;$('#alpha').value=alpha;paint();};
 $('#reset').onclick=()=>{alpha=1.4;background='#181818';$('#alpha').value=alpha;compare(false);paint();};
 async function start(){
- const base='../experiments/formal-evaluation/assets/';const manifest=await(await fetch(base+'manifest.json')).json();
- const texts=await Promise.all(manifest.icons.map(async icon=>{const r=await fetch(base+icon.name);if(!r.ok)throw Error('Unable to load icons');return r.text();}));
+ const response=await fetch('atlas.json');if(!response.ok)throw Error('Unable to load icons');
+ const atlas=await response.json(),texts=atlas.icons.map(icon=>icon.svg);
  for(const [i,text] of texts.entries()){const doc=new DOMParser().parseFromString(text,'image/svg+xml');const svg=document.importNode(doc.documentElement,true);svg.setAttribute('aria-hidden','true');svg.style.color=palette[i%7];$('#result').append(svg);$('#original').append(svg.cloneNode(true));}
  paint();$('#loading').remove();window.demoReady=true;
 }
