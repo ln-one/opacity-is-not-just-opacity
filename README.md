@@ -2,7 +2,7 @@
 
 ![The same icons on a dark background: original at alpha 1, enhanced at alpha 2](docs/images/dark-comparison.png)
 
-**[Online demo](https://ln-one.github.io/opacity-is-not-just-opacity/demo/)** · [Paper PDF](output/preprint/opacity-is-not-just-opacity.pdf) · [Manuscript](markdown/manuscript.en.md) · [Reproduction guide](experiments/formal-evaluation/README.md)
+**[Online demo](https://ln-one.github.io/opacity-is-not-just-opacity/demo/)** · [arXiv](https://arxiv.org/abs/2609.14971) · [Paper PDF](output/preprint/opacity-is-not-just-opacity.pdf) · [Manuscript](markdown/manuscript.en.md) · [Reproduction guide](experiments/formal-evaluation/README.md)
 
 **Chunran Zhang · Southwest Jiaotong University**
 
